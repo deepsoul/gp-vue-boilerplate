@@ -2,6 +2,7 @@
   "plugins": {
     "postcss-normalize": {},
     "postcss-nested": {},
+    "postcss-grid-kiss": { "fallback": true, "optimize": false },
     "rucksack-css": {}
   }
 }
