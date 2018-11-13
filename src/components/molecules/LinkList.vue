@@ -24,8 +24,19 @@ export default {
 };
 </script>
 
-<style module>
-:global(a.nuxt-link-active) {
+<style lang="postcss" scoped>
+ul {
+  display: inline-flex;
+  list-style: none;
+
+  li {
+    a {
+      padding: 0.5em;
+    }
+  }
+}
+
+a.nuxt-link-active {
   color: red;
 }
 </style>

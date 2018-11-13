@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <link-list :list="navigation"/>
+      <LinkList :list="navigation"/>
     </nav>
     <nuxt-link
       v-for="locale in $i18n.locales"
@@ -14,10 +14,10 @@
 
 <script>
 import LinkList from '~/components/molecules/LinkList';
-
 export default {
+  name: 'TheHeader',
   components: {
-    'link-list': LinkList
+    LinkList
   },
   props: {
     navigation: {
@@ -34,3 +34,6 @@ export default {
   }
 };
 </script>
+<style lang="postcss" scoped>
+</style>
+

@@ -10,6 +10,7 @@
 import LinkList from '~/components/molecules/LinkList';
 
 export default {
+  name: 'TheFooter',
   components: {
     'link-list': LinkList
   },
