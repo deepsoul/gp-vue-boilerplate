@@ -25,10 +25,7 @@ export default {
   methods: {
     emitEvent() {
       let cValue = Math.random() * 400;
-      let className = 'non-active';
-      if(cValue < 300) {
-        className = 'active';
-      }
+      let className = cValue < 300 ? 'non-active' : 'active';
       this.$emit('onChildEvent',{someClass:className, someValue: cValue});
       this.valueComesFromData +=2;
     }
