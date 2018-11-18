@@ -16,7 +16,7 @@ export default {
     list: {
       type: Array,
       required: true,
-      default: function() {
+      default: function () {
         return [];
       }
     }
