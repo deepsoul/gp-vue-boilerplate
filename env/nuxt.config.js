@@ -1,6 +1,7 @@
 // process.env.DEBUG = 'webpack-virtual-modules';
 
 const path = require('path');
+require('dotenv').config();
 
 module.exports = {
   dev: process.env.NODE_ENV === 'development',
@@ -30,9 +31,13 @@ module.exports = {
     extendRoutes(routes) {
       routes.forEach(route => {
         if (/overlays/.test(route.name)) {
-          route.meta = { transitionName: 'zoom' };
+          route.meta = {
+            transitionName: 'zoom'
+          };
         } else {
-          route.meta = { transitionName: 'slide' };
+          route.meta = {
+            transitionName: 'slide'
+          };
         }
       });
       console.log(routes);
@@ -56,6 +61,7 @@ module.exports = {
     '@/modules/svg',
     '@/modules/webp',
     '@/modules/image',
+    '@nuxtjs/axios',
     [
       'nuxt-i18n',
       {
