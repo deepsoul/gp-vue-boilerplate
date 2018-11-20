@@ -26,7 +26,17 @@ module.exports = {
   },
 
   router: {
-    base: '/'
+    base: '/',
+    extendRoutes(routes) {
+      routes.forEach(route => {
+        if (/overlays/.test(route.name)) {
+          route.meta = { transitionName: 'zoom' };
+        } else {
+          route.meta = { transitionName: 'slide' };
+        }
+      });
+      console.log(routes);
+    }
   },
 
   plugins: [{
