@@ -1,11 +1,12 @@
 // process.env.DEBUG = 'webpack-virtual-modules';
 
 const path = require('path');
+require('dotenv').config();
 
 module.exports = {
   dev: process.env.NODE_ENV === 'development',
   srcDir: 'src/',
-  css: [],
+  css: ['~/assets/css/main.css'],
   env: {},
   build: {
     analyze: false,
@@ -18,14 +19,22 @@ module.exports = {
     transpile: []
   },
   render: {
-    http2: { push: true }
+    http2: {
+      push: true
+    }
   },
 
   router: {
     base: '/'
   },
 
-  plugins: [{ src: '@/plugins/intersectionObserver' }],
+  plugins: [{
+      src: '@/plugins/intersectionObserver'
+    },
+    {
+      src: '@/plugins/baseComponents'
+    }
+  ],
 
   vendor: ['default-passive-events'],
 
@@ -36,11 +45,11 @@ module.exports = {
     '@/modules/svg',
     '@/modules/webp',
     '@/modules/image',
+    '@nuxtjs/axios',
     [
       'nuxt-i18n',
       {
-        locales: [
-          {
+        locales: [{
             code: 'en',
             iso: 'en-US'
           },
@@ -100,16 +109,16 @@ module.exports = {
 
   head: {
     meta: [],
-    link: [],
-    script: [
-      {
-        src:
-          'https://cdn.polyfill.io/v2/polyfill.min.js?features=HTMLPictureElement',
+    link: [{
+      href: 'https://fonts.googleapis.com/css?family=Roboto',
+      rel: 'stylesheet'
+    }],
+    script: [{
+        src: 'https://cdn.polyfill.io/v2/polyfill.min.js?features=HTMLPictureElement',
         defer: true
       },
       {
-        innerHTML:
-          'document.createElement( "picture" );document.createElement( "source" );'
+        innerHTML: 'document.createElement( "picture" );document.createElement( "source" );'
       }
     ],
     __dangerouslyDisableSanitizers: ['script']
