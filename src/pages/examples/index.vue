@@ -21,6 +21,10 @@ export default {
         {
           'url': '/examples/watcher',
           'text': 'Watcher'
+        },
+        {
+          'url': '/examples/v-for',
+          'text': 'V-For'
         }]
   };
   }

@@ -24,7 +24,9 @@ export default {
     };
   },
   async asyncData ({ app }) {
+
     let url = process.env.EMPLOYEES_API_URL;
+    console.log('ERROR', url);
     const { data } = await app.$axios.post(url,
     JSON.stringify({
         sort: {_created:-1},

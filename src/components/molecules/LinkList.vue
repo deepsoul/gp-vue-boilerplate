@@ -16,7 +16,7 @@ export default {
     list: {
       type: Array,
       required: true,
-      default: function() {
+      default: function () {
         return [];
       }
     }
@@ -24,8 +24,23 @@ export default {
 };
 </script>
 
-<style module>
-:global(a.nuxt-link-active) {
-  color: red;
+<style lang="postcss" scoped>
+ul {
+  display: inline-flex;
+  list-style: none;
+
+  & li {
+    padding: 0 0.5em;
+
+    & a {
+      padding: 0.5em;
+      text-decoration: none;
+
+      &.nuxt-link-exact-active {
+        color: red;
+        background: #ccc;
+      }
+    }
+  }
 }
 </style>

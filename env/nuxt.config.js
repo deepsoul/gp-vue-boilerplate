@@ -7,7 +7,12 @@ module.exports = {
   dev: process.env.NODE_ENV === 'development',
   srcDir: 'src/',
   css: ['~/assets/css/main.css'],
-  env: {},
+  env: {
+    URL: 'http: //172.20.20.54/',
+    BASE_URL: 'http://172.20.20.54/',
+    EMPLOYEES_API_URL: 'http://172.20.20.54/api/collections/get/Employees?token=account-e8c4868fb7661ecb2c548fa9034b36',
+    API_TOKEN: 'account-e8c4868fb7661ecb2c548fa9034b36'
+  },
   build: {
     analyze: false,
     // analyze: {
@@ -46,6 +51,7 @@ module.exports = {
     '@/modules/webp',
     '@/modules/image',
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
     [
       'nuxt-i18n',
       {

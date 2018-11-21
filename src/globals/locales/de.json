@@ -1,7 +1,6 @@
 {
   "header": {
-    "navigation": [
-      {
+    "navigation": [{
         "title": "Start",
         "url": "index"
       },
@@ -14,14 +13,13 @@
         "url": "sub"
       },
       {
-        "title": "Projekte",
-        "url": "sub-projects"
+        "title": "Beispiele",
+        "url": "examples"
       }
     ]
   },
   "footer": {
-    "navigation": [
-      {
+    "navigation": [{
         "title": "Kontakt",
         "url": "contact"
       },
