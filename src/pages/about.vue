@@ -16,6 +16,9 @@
     <headline :content="$t('test')"/>
     hello22 {{ $t('configxyz') }}
     {{ $t('hello') }}
+    <nuxt-link :to="localePath({path: $route.path, query:{test: 123}})">
+      Overlay
+    </nuxt-link>
     <img
       src="~/assets/image.svg"
       alt="test">
@@ -63,13 +66,14 @@ export default {
     Headline
   },
 
-  head () {
+  head() {
     return {
       title: 'title of page'
     };
   },
 
-  data () {
+  data() {
+    console.log(this.$route);
     return {
       msg: 'I will change'
     };

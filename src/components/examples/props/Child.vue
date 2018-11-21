@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button @click="emitEvent">Emit Event from Child</button>
+    <gp-base-button
+      :content="'Emit Event from Child'"
+      @click.native="emitEvent"/>
     <h2>External Counter {{ valueComesFromParent }}</h2>
     <h2>Internal Counter {{ valueComesFromData }}</h2>
   </div>
@@ -23,10 +25,7 @@ export default {
   methods: {
     emitEvent() {
       let cValue = Math.random() * 400;
-      let className = 'non-active';
-      if(cValue < 300) {
-        className = 'active';
-      }
+      let className = cValue < 300 ? 'non-active' : 'active';
       this.$emit('onChildEvent',{someClass:className, someValue: cValue});
       this.valueComesFromData +=2;
     }

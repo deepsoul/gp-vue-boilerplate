@@ -17,12 +17,16 @@
     hello2 huhu234 {{ $t('configxyz') }}
     {{ $t('test') }}
     <br>
-
+    <nuxt-link :to="localePath({path: this.$route.path, query:{test: 123}})">
+      Overlay
+    </nuxt-link>
+    <modal/>
   </div>
 </template>
 
 <script>
 import Headline from '~/components/atoms/Headline';
+import Modal from '@/components/molecules/Modal';
 
 export default {
   nuxtI18n: {
@@ -32,10 +36,11 @@ export default {
     }
   },
   components: {
-    headline: Headline
+    Headline,
+    Modal
   },
 
-  head () {
+  head() {
     return {
       title: 'title of page'
     };

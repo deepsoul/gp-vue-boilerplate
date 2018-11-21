@@ -13,9 +13,6 @@
   <div class="content">
     <h1>Headline</h1>
     <p>{{ $t('text') }}</p>
-    <nuxt-link :to="localePath({name: 'overlays-info'})">
-      Overlay
-    </nuxt-link>
   </div>
 </template>
 

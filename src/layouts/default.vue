@@ -2,18 +2,22 @@
   <div>
     <page-header :navigation="$t('header.navigation')"/>
     <main>
-      <nuxt/>
+      <transition-page>
+        <nuxt/>
+      </transition-page>
     </main>
     <page-footer :navigation="$t('footer.navigation')"/>
   </div>
 </template>
 
 <script>
+import TransitionPage from '../components/transitions/Page.vue';
 import PageHeader from '../components/page/Header';
 import PageFooter from '../components/page/Footer';
 
 export default {
   components: {
+    TransitionPage,
     PageHeader,
     PageFooter
   },
