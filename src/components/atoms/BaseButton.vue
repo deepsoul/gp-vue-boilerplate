@@ -1,5 +1,7 @@
 <template>
-  <button>{{ content }}</button>
+  <v-btn
+    :color="color"
+    dark>{{ content }}</v-btn>
 </template>
 
 <script>
@@ -9,6 +11,11 @@ props: {
       type: String,
       required: true,
       default: 'BaseButton'
+    },
+    color: {
+      type: String,
+      required: false,
+      default: 'green'
     }
   }
 };

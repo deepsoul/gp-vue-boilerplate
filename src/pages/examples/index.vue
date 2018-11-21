@@ -34,5 +34,16 @@ export default {
 <style lang="postcss" scoped>
 div {
   padding: 2em;
+
+  & ul {
+    list-style: none;
+
+    & li {
+      & a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
 }
 </style>

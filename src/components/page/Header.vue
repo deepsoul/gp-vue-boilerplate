@@ -1,5 +1,19 @@
 <template>
-  <header>
+
+  <v-toolbar
+    color="primary"
+    dark
+    fixed
+    extended
+    height="40">
+    <v-toolbar-side-icon/>
+
+    <v-toolbar-title
+      slot="extension"
+      class="white--text">{{ title }}</v-toolbar-title>
+
+    <v-spacer/>
+
     <nav>
       <link-list :list="navigation"/>
     </nav>
@@ -9,8 +23,24 @@
       :key="locale.code"
       :to="switchLocalePath(locale.code)">{{ locale.code }}</nuxt-link>
 
-  </header>
+    <v-btn icon>
+      <v-icon>search</v-icon>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon>apps</v-icon>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon>refresh</v-icon>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon>more_vert</v-icon>
+    </v-btn>
+  </v-toolbar>
 </template>
+
 
 <script>
 import LinkList from '~/components/molecules/LinkList';
@@ -27,6 +57,11 @@ export default {
         return [];
       }
     }
+  },
+  data () {
+    return {
+        title: 'G&P Boilerplate Examples'
+    };
   },
 
   mounted() {

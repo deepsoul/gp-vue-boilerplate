@@ -7,6 +7,7 @@
       <Employee
         :first-name="employee.first_name"
         :last-name="employee.last_name"
+        :position="employee.title"
         :image="getImagePath(employee)" />
   </li></ul>
 </template>
@@ -26,7 +27,6 @@ export default {
   async asyncData ({ app }) {
 
     let url = process.env.EMPLOYEES_API_URL;
-    console.log('ERROR', url);
     const { data } = await app.$axios.post(url,
     JSON.stringify({
         sort: {_created:-1},
@@ -49,6 +49,7 @@ export default {
 <style lang="postcss" scoped>
 ul {
   & li {
+    margin: 0.5em 0;
     list-style: none;
   }
 }

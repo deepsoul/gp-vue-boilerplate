@@ -33,7 +33,9 @@ ul {
     padding: 0 0.5em;
 
     & a {
+      display: block;
       padding: 0.5em;
+      color: #fff;
       text-decoration: none;
 
       &.nuxt-link-exact-active {

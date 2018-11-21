@@ -1,10 +1,14 @@
 <template>
   <div>
-    <page-header :navigation="$t('header.navigation')"/>
-    <main>
-      <nuxt/>
-    </main>
-    <page-footer :navigation="$t('footer.navigation')"/>
+    <v-app dark>
+      <page-header :navigation="$t('header.navigation')"/>
+      <v-content>
+        <main>
+          <nuxt/>
+        </main>
+      </v-content>
+      <page-footer :navigation="$t('footer.navigation')"/>
+    </v-app>
   </div>
 </template>
 
@@ -30,6 +34,10 @@ export default {
 <style lang="postcss">
 body {
   margin: 0;
+}
+
+main {
+  margin-top: 40px;
 }
 </style>
 

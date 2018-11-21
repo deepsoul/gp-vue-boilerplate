@@ -38,6 +38,9 @@ module.exports = {
     },
     {
       src: '@/plugins/baseComponents'
+    },
+    {
+      src: '@/plugins/vuetify'
     }
   ],
 
@@ -52,6 +55,7 @@ module.exports = {
     '@/modules/image',
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
+    '@nuxtjs/vuetify',
     [
       'nuxt-i18n',
       {
@@ -110,19 +114,35 @@ module.exports = {
           lang: 'de'
         }
       }
-    ]
+    ],
+
   ],
+
+  vuetify: {
+    // Vuetify options
+    css: true,
+    theme: {
+      primary: '#3f51b5',
+      secondary: '#b0bec5',
+      accent: '#8c9eff',
+      error: '#b71c1c'
+    }
+  },
 
   head: {
     meta: [],
     link: [{
       href: 'https://fonts.googleapis.com/css?family=Roboto',
       rel: 'stylesheet'
+    }, {
+      href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',
+      rel: 'stylesheet'
     }],
     script: [{
         src: 'https://cdn.polyfill.io/v2/polyfill.min.js?features=HTMLPictureElement',
         defer: true
       },
+
       {
         innerHTML: 'document.createElement( "picture" );document.createElement( "source" );'
       }
