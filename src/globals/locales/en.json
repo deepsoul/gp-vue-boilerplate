@@ -1,5 +1,6 @@
 {
   "header": {
+    "snackbarText": "Ein deutscher Snackbar Text",
     "navigation": [{
         "title": "Home",
         "url": "index"
@@ -9,8 +10,8 @@
         "url": "about"
       },
       {
-        "title": "Sub",
-        "url": "sub"
+        "title": "Projects",
+        "url": "projects"
       },
       {
         "title": "Examples",

@@ -5,3 +5,8 @@ body {
 main {
   padding: 1.5em;
 }
+
+.application a {
+  color: #fff;
+  text-decoration: none;
+}

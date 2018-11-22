@@ -37,7 +37,7 @@ body {
 }
 
 main {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 </style>
 

@@ -50,13 +50,13 @@
 </template>
 
 <script>
-import Headline from '~/components/atoms/Headline';
+import Headline from '@/components/atoms/Headline';
 
 export default {
   nuxtI18n: {
     paths: {
-      en: '/about',
-      de: '/ueber'
+      en: '/examples/picture',
+      de: '/examples/bilder'
     }
   },
   components: {
@@ -91,10 +91,11 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 img {
   display: block;
   width: 100%;
 }
 </style>
+
 

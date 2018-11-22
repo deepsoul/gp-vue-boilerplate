@@ -13,7 +13,7 @@
   <div class="content">
     <section>
       <v-parallax
-        src="/img/hero.jpeg"
+        src="/img/C5D_4662.jpg"
         height="600">
         <v-layout
           column
@@ -21,12 +21,11 @@
           justify-center
           class="white--text"
         >
-          <img
-            src="/img/logo.jpg"
-            alt="G&amp;P Boilerplate"
-            height="200">
-          <h1 class="white--text mb-2 display-1 text-xs-center">G&amp;P Vue Boilerplate</h1>
-          <div class="subheading mb-3 text-xs-center">Powered by nuxtjs</div>
+          <div class="welcome-text">
+            <h1 class="white--text mb-2 display-1 text-xs-center">G&amp;P Vue Boilerplate</h1>
+            <div class="subheading mb-3 text-xs-center">Powered by nuxtjs</div>
+          </div>
+
           <v-btn
             class="blue lighten-2 mt-5"
             dark
@@ -134,7 +133,7 @@
 
     <section>
       <v-parallax
-        src="/img/hero.jpeg"
+        src="/img/C5D_4737.jpg"
         height="380">
         <v-layout
           column
@@ -168,7 +167,7 @@
               <v-card-title
                 primary-title
                 class="layout justify-center">
-                <div class="headline">Company info</div>
+                <div class="headline">G&amp;P Dev Dudes</div>
               </v-card-title>
               <v-card-text>
                 Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
@@ -204,7 +203,7 @@
                     <v-icon class="blue--text text--lighten-2">place</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content>
-                    <v-list-tile-title>Hamburg, DE</v-list-tile-title>
+                    <v-list-tile-title>Schaartor 1, Hamburg, DE</v-list-tile-title>
                   </v-list-tile-content>
                 </v-list-tile>
                 <v-list-tile>
@@ -234,3 +233,10 @@ export default {
   }
 };
 </script>
+<style lang="postcss" scoped>
+.welcome-text {
+  padding: 0.5em;
+  background: rgb(0, 0, 0, 0.8);
+}
+</style>
+

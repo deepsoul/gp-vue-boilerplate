@@ -11,6 +11,7 @@ module.exports = {
     URL: 'http: //172.20.20.54/',
     BASE_URL: 'http://172.20.20.54/',
     EMPLOYEES_API_URL: 'http://172.20.20.54/api/collections/get/Employees?token=account-e8c4868fb7661ecb2c548fa9034b36',
+    PROJECTS_API_URL: 'http://172.20.20.54/api/collections/get/Projects?token=account-e8c4868fb7661ecb2c548fa9034b36',
     API_TOKEN: 'account-e8c4868fb7661ecb2c548fa9034b36'
   },
   build: {

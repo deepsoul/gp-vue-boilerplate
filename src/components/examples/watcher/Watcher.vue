@@ -1,13 +1,33 @@
 <template>
   <div>
     <h1>Watcher</h1>
-    <input
-      ref="myInput"
-      placeholder="Please put change value"
-      type="text"
-      @change="onChangeValueToWatch">
+
+    <v-flex
+      xs12
+      sm6
+      md6>
+      <v-text-field
+        label="Solo"
+        placeholder="Please put change value"
+        solo
+        @change="onChangeValueToWatch"
+      />
+    </v-flex>
     <h2 v-if="dontCallPolice">No need for Police</h2>
-    <h2 v-else>Call the POLICE, NOW!!!</h2>
+    <v-flex
+      v-else
+      xs12
+      sm6
+      md6>
+      <v-alert
+
+        :value="true"
+        type="error"
+        color="red"
+      >
+        Call the police immadiately
+      </v-alert>
+    </v-flex>
   </div>
 </template>
 
@@ -34,8 +54,8 @@ export default {
     //this.$refs.myInput.addEventListener('change', this.onChangeValueToWatch);
   },
   methods: {
-    onChangeValueToWatch(event) {
-      this.valueToWatch = event.target.value;
+    onChangeValueToWatch(value) {
+      this.valueToWatch = value;
     }
   }
 };

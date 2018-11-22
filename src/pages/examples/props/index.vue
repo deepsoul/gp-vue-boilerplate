@@ -1,6 +1,14 @@
 <template>
   <div>
-    <h1 :class="{active:activeClass}">Props <span v-if="activeClass">now with active class</span></h1>
+    <h1 :class="{active:activeClass}">Props
+      <v-alert
+        :value="activeClass"
+        color="green"
+        type="success">
+        This is a success alert.
+      </v-alert>
+
+    </h1>
     <Parent @onParentEmittedEvent="onParentEmittedEventHandler" />
   </div>
 </template>
@@ -35,11 +43,11 @@ export default {
 div {
   padding: 3em;
 
-  h1 {
-    color: #990;
+  & h1 {
+    color: rgb(255, 0, 0);
 
     &.active {
-      color: #f0f;
+      color: rgb(0, 255, 30);
     }
   }
 }

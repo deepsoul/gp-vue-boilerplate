@@ -7,27 +7,22 @@
       <v-card>
         <v-img
           :src="image"
-          aspect-ratio="2.0"
+          aspect-ratio="2.75"
         />
 
         <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">{{ firstName }} {{ lastName }}</h3>
-            <div>{{ position }}</div>
-            <div
-              v-if="isDetail"
-              v-html="description"/>
+            <h3 class="headline mb-0">{{ name }}</h3>
+            <div>{{ description }}</div>
           </div>
         </v-card-title>
 
         <v-card-actions>
           <v-btn
-            color="orange"><v-icon>phone</v-icon>Call </v-btn>
-          <nuxt-link
-            v-if="!isDetail"
-            :to="getCoderLink(coderId)">
+            color="orange"><v-icon>phone</v-icon>Call Coder {{ client.first_name }} </v-btn>
+          <nuxt-link :to="getProjectLink(projectId)">
             <v-btn
-              color="green">Explore Coder</v-btn>
+              color="green">Explore Project</v-btn>
           </nuxt-link>
         </v-card-actions>
       </v-card>
@@ -39,39 +34,34 @@
 export default {
   name: 'Employee',
   props: {
-    firstName: {
+    name: {
       type: String,
       default:''
-    },
-    lastName: {
-      type: String,
-      default: ''
-    },
-    position: {
-      type: String,
-      default: ''
     },
     description: {
       type: String,
       default: ''
     },
+    client: {
+      type: Object,
+      default: function() {
+        return {};
+      }
+    },
     image: {
       type: String,
       default: ''
     },
-    coderId: {
+    projectId:{
       type: String,
-      default: ''
-    },
-    isDetail: {
-      type: Boolean,
-      default: false
+      default: '-1'
     }
   },
   methods: {
-    getCoderLink(id) {
-          return '/about/' + id;
-        }
+    getProjectLink(id) {
+      return '/projects/' + id;
+    }
+
   }
 
 };
