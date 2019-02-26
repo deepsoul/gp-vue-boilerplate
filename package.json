@@ -18,6 +18,7 @@
     "build": "cross-env NODE_ENV=build nuxt build --config-file env/nuxt.config.js",
     "static": "npm run build && cross-env NODE_ENV=static nuxt generate --config-file env/nuxt.config.js",
     "start": "cross-env NODE_ENV=production node ./env/server.js",
+    "generate": "nuxt generate --config-file env/nuxt.config.js",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:es": "eslint --fix --ext .js,.vue --ext .json --ignore-path .gitignore ./",
     "lint:css": "npx stylelint 'src/**/*.vue'",
