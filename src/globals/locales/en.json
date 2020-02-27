@@ -1,5 +1,6 @@
 {
-  "header": {
+  "header": {},
+  "menu": {
     "navigation": [
       {
         "title": "Home",
@@ -10,14 +11,33 @@
         "url": "about"
       },
       {
-        "title": "Sub",
-        "url": "sub"
-      },
-      {
         "title": "Projects",
-        "url": "sub-projects"
+        "url": "projects",
+        "childrens": [
+          {
+            "title": "Project 1",
+            "url": {
+              "name": "projects-project",
+              "params": {
+                "project": "project-1"
+              }
+            }
+          },
+          {
+            "title": "Project 2",
+            "url": {
+              "name": "projects-project",
+              "params": {
+                "project": "project-2"
+              }
+            }
+          }
+        ]
       }
     ]
+  },
+  "menuButton": {
+    "label": "Menu Open/Close"
   },
   "footer": {
     "navigation": [
@@ -34,6 +54,5 @@
         "url": "legals"
       }
     ]
-  },
-  "configxyz": "I'm a Headline"
+  }
 }
